@@ -1,37 +1,15 @@
 {
-  "name": "admin-frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.7.9",
-    "core-js": "^3.40.0",
-    "eta": "^3.5.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-scripts": "^5.0.1",
-    "semver": "^7.7.1",
-    "serialize-javascript": "^6.0.2",
-    "shell-quote": "^1.8.2",
-    "tough-cookie": "^5.1.1",
-    "uuid": "^11.1.0",
-    "web-vitals": "^2.1.4",
-    "webpack-dev-middleware": "^7.4.2"
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -45,18 +23,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@babel/plugin-transform-class-properties": "^7.25.9",
-    "@babel/plugin-transform-dynamic-import": "^7.25.9",
-    "@babel/plugin-transform-json-strings": "^7.25.9",
-    "@babel/plugin-transform-nullish-coalescing-operator": "^7.26.6",
-    "@babel/plugin-transform-numeric-separator": "^7.25.9",
-    "@babel/plugin-transform-optional-catch-binding": "^7.25.9",
-    "@babel/plugin-transform-optional-chaining": "^7.25.9",
-    "@babel/plugin-transform-private-methods": "^7.25.9",
-    "@babel/plugin-transform-unicode-property-regex": "^7.25.9",
-    "@rollup/plugin-terser": "^0.4.4",
-    "install": "^0.13.0",
-    "jest": "^27.5.1"
+  "dependencies": {
+    "react-dom": "^19.0.0"
   }
 }

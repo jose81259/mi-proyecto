@@ -1,29 +1,16 @@
-# Leer el contenido del archivo package.json
-$packageJsonPath = "C:\ruta\hacia\tu\proyecto\package.json"
-$packageJsonContent = Get-Content -Path $packageJsonPath -Raw | ConvertFrom-Json
-
-# Función para actualizar la versión de un paquete a la más reciente
-function Update-PackageVersion {
-    param (
-        [string]$packageName
-    )
-    
-    # Obtener la versión más reciente del paquete
-    $latestVersion = npm show $packageName version
-    
-    # Actualizar la versión del paquete en package.json
-    $packageJsonContent.dependencies.$packageName = "^$latestVersion"
+{
+  "name": "mi-proyecto",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://jose81259.github.io/mi-proyecto",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    // Aquí van tus dependencias
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
 }
-
-# Lista de paquetes a actualizar
-$packagesToUpdate = @("react-scripts", "@babel/plugin-transform-json-strings", "@babel/plugin-transform-unicode-property-regex", "@babel/plugin-transform-optional-catch-binding", "@babel/plugin-transform-dynamic-import", "@babel/plugin-transform-optional-chaining", "@babel/plugin-transform-nullish-coalescing-operator", "@babel/plugin-transform-class-properties", "@babel/plugin-transform-numeric-separator", "@babel/plugin-transform-async-generator-functions", "@babel/plugin-transform-object-rest-spread")
-
-# Actualizar cada paquete
-foreach ($package in $packagesToUpdate) {
-    Update-PackageVersion -packageName $package
-}
-
-# Escribir el contenido actualizado al archivo package.json
-$packageJsonContent | ConvertTo-Json -Depth 10 | Set-Content -Path $packageJsonPath -Encoding utf8
-
-Write-Output "Paquetes actualizados en $packageJsonPath"
