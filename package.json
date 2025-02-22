@@ -1,8 +1,5 @@
 {
-  "devDependencies": {
-    "gh-pages": "^6.3.0",
-    "react-scripts": "^5.0.1"
-  },
+  "homepage": "https://jose-garcia81259.github.io/mi-proyecto",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -10,20 +7,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "dependencies": {
-    "react-dom": "^19.0.0"
   }
 }
+
