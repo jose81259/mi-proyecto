@@ -1,12 +1,47 @@
 {
-  "homepage": "https://jose81258.github.io/mi-proyecto",
+  "homepage": "https://jose81259.github.io/mi-proyecto",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "react-scripts": "^5.0.1"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.26.6",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.5",
+    "@mui/lab": "^6.0.0-beta.28",
+    "@mui/material": "^6.4.5",
+    "@testing-library/dom": "^10.0.0",
+    "core-js": "^3.40.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-hook-form": "^7.54.2",
+    "typescript": "^5.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu_usuario/tu_repositorio.git"
+  },
+  "license": "MIT"
 }
-
